@@ -23,6 +23,7 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionTask: UILabel!
     @IBOutlet weak var checkButton: UIButton!
     
+    @IBOutlet weak var date: UILabel!
     static let indentifier = "TaskTableViewCell"
     
     
@@ -67,13 +68,5 @@ class TaskTableViewCell: UITableViewCell {
     
     @IBAction func checkButtonClick(_ sender: Any) {
         print("checkButtonClick")
-//        if let a = isCheckedd {
-//            checkButton.setImage(UIImage(systemName:"square"),for: .normal)
-//            isCheckedd = false
-//                }
-//                else {
-//            checkButton.setImage( UIImage(systemName:"square.fill"),for: .normal)
-//                    isCheckedd = true
-//            }
     }
 }

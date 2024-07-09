@@ -19,9 +19,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        vm.addTask(task: TaskData(id: "das", title: "Strij;kqwfj;lqw qklfw;jqwlfjqw;l fqhblw;kfhqw;lfj fwkq;fhq;lwk ng", descreption: "sljbvlwkjb eqlwkfhnk;lqwejf;cl df;qjw;klqj;klqejwf dkfqnw;fj;qlwf sad", date: Date.now))
+        tableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.indentifier)
+
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.indentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -49,6 +52,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.descriptionTask.text = task.descreption
         cell.imageTask?.image = task.image
         cell.isCheckedd = task.status == StatusData.COMPLECTED
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "d.M.yyyy"
+        let formattedDate = dateFormatter.string(from: task.date)
+        
+        cell.date.text = formattedDate
         cell.idd = task.id
         cell.delegate = self
         
@@ -56,7 +65,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hello \(indexPath) ")
+        print("hello \(indexPath.row) ")
     }
 
     override func viewWillAppear(_ animated: Bool) {

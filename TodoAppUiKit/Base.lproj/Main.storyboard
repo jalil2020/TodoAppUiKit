@@ -61,14 +61,17 @@
                                     <action selector="saveTask:" destination="T1r-Pa-lwZ" eventType="touchUpInside" id="rNR-L6-1lT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-mf-wVP">
-                                <rect key="frame" x="16" y="366" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-mf-wVP">
+                                <rect key="frame" x="16" y="366" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="65M-Fy-Yxm">
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65M-Fy-Yxm">
                                 <rect key="frame" x="167" y="358" width="202" height="36"/>
+                                <date key="date" timeIntervalSinceReferenceDate="742124684.42216599">
+                                    <!--2024-07-08 09:44:44 +0000-->
+                                </date>
                             </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q56-MO-cRg">
                                 <rect key="frame" x="16" y="464" width="240" height="100"/>
@@ -180,7 +183,7 @@
             </objects>
             <point key="canvasLocation" x="626.71755725190837" y="1291.549295774648"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="OCd-1D-Cim">
             <objects>
                 <viewController id="oDB-5U-M9d" customClass="SettingsViewController" customModule="TodoAppUiKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,30 +191,124 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7d-0I-HW8">
-                                <rect key="frame" x="129" y="409" width="135" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Setting screen"/>
-                                <connections>
-                                    <action selector="openCreateTaskScreen:" destination="oDB-5U-M9d" eventType="touchUpInside" id="keh-1X-6N9"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="V5V-s0-0er">
+                                <rect key="frame" x="16" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setting screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qY6-AL-9Qx">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="44.333333333333336"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E78-Tx-cAK">
+                                        <rect key="frame" x="0.0" y="79.333333333333343" width="393" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="thW-UD-PIa">
+                                        <rect key="frame" x="0.0" y="134.66666666666666" width="393" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date in descending order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="quc-gR-bLe">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="31"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="5kd-LP-Gjv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a17-K1-3Yv">
+                                                <rect key="frame" x="300" y="0.0" width="95" height="31"/>
+                                                <connections>
+                                                    <action selector="chageSwitch:forEvent:" destination="oDB-5U-M9d" eventType="editingChanged" id="Wxp-JM-4AN"/>
+                                                    <action selector="changeSwitchSort:" destination="oDB-5U-M9d" eventType="valueChanged" id="f47-aL-9fA"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCy-cJ-k99">
+                                        <rect key="frame" x="0.0" y="200.66666666666669" width="393" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWa-Fe-06I">
+                                                <rect key="frame" x="0.0" y="0.0" width="66.333333333333329" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lHa-WK-uFx">
+                                                <rect key="frame" x="66.333333333333343" y="0.0" width="326.66666666666663" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="380" id="lMf-Ve-dJh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtering Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zuv-GG-ckV">
+                                        <rect key="frame" x="0.0" y="265.66666666666669" width="393" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vu3-lW-9CT">
+                                        <rect key="frame" x="0.0" y="321" width="393" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Filtering" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZK-w7-mqi">
+                                                <rect key="frame" x="0.0" y="0.0" width="154.33333333333334" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-JO-qxg">
+                                                <rect key="frame" x="154.33333333333337" y="0.0" width="238.66666666666663" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="L6e-T5-Ziu"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="380" id="Ur6-iU-l6Y"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7d-0I-HW8">
+                                        <rect key="frame" x="0.0" y="386" width="393" height="324"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="380" id="dZ2-Qp-hbe"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title=""/>
+                                        <connections>
+                                            <action selector="openCreateTaskScreen:" destination="oDB-5U-M9d" eventType="touchUpInside" id="keh-1X-6N9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lJC-sp-wwp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lJC-sp-wwp" firstAttribute="bottom" secondItem="V5V-s0-0er" secondAttribute="bottom" id="3r7-bp-iiT"/>
+                            <constraint firstItem="V5V-s0-0er" firstAttribute="leading" secondItem="lJC-sp-wwp" secondAttribute="leading" constant="16" id="SQL-S3-g7h"/>
+                            <constraint firstItem="V5V-s0-0er" firstAttribute="top" secondItem="lJC-sp-wwp" secondAttribute="top" id="cGA-BH-dc1"/>
+                            <constraint firstItem="V5V-s0-0er" firstAttribute="trailing" secondItem="lJC-sp-wwp" secondAttribute="trailing" constant="16" id="vGa-52-1sp"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="esV-G8-Q2E" colorLabel="IBBuiltInLabel-Red"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.crop.circle.fill" catalog="system" selectedImage="person.crop.circle.fill" id="esV-G8-Q2E" colorLabel="IBBuiltInLabel-Red"/>
+                    <connections>
+                        <outlet property="filterButton" destination="L4t-JO-qxg" id="TmV-B9-4Pz"/>
+                        <outlet property="sortStatusButton" destination="lHa-WK-uFx" id="0ro-mg-cZe"/>
+                        <outlet property="switchSort" destination="a17-K1-3Yv" id="Noc-Lf-AbW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="utb-Fm-SX4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1426.7175572519084" y="1291.549295774648"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="MhG-C7-6H0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uof-9Q-Cz4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="TnJ-Hj-49B" colorLabel="IBBuiltInLabel-Red"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" selectedImage="homekit" id="TnJ-Hj-49B" colorLabel="IBBuiltInLabel-Red"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ov1-F5-70t">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -228,6 +325,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="104"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
