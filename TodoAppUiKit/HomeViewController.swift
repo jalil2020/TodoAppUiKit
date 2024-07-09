@@ -19,8 +19,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        vm.addTask(task: TaskData(id: "das", title: "Strij;kqwfj;lqw qklfw;jqwlfjqw;l fqhblw;kfhqw;lfj fwkq;fhq;lwk ng", descreption: "sljbvlwkjb eqlwkfhnk;lqwejf;cl df;qjw;klqj;klqejwf dkfqnw;fj;qlwf sad", date: Date.now))
+
         tableView.register(TaskTableViewCell.nib(), forCellReuseIdentifier: TaskTableViewCell.indentifier)
 
         tableView.dataSource = self
@@ -66,6 +65,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("hello \(indexPath.row) ")
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let createTaskController = storyboard.instantiateViewController(identifier: "info_view_controller") as! InfoViewController
+        createTaskController.data = self.vm.tempList[indexPath.row]
+        
+        self.navigationController?.pushViewController(createTaskController, animated: true)
+    
+
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -85,8 +92,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func coplectedButtonClick(in index: Int?, id: String, isChecked: Bool) {
         vm.changeTaskStatus(b: !isChecked, id: id)
         print("coplectedButtonClick\(isChecked)")
-        tableView.reloadRows(at: [IndexPath(row: index ?? 0, section: 0)], with: UITableView.RowAnimation.none)
+        tableView.reloadData()
 
-        viewDidLoad()
     }
 }

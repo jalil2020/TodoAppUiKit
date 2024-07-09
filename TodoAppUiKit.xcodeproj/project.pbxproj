@@ -21,6 +21,7 @@
 		525598872C3D123C00C5789C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525598852C3D123C00C5789C /* TaskTableViewCell.swift */; };
 		525598882C3D123C00C5789C /* TaskTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 525598862C3D123C00C5789C /* TaskTableViewCell.xib */; };
 		528665C82C3D26D300C657EE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528665C72C3D26D300C657EE /* MainViewModel.swift */; };
+		528665CE2C3DA6F400C657EE /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528665CD2C3DA6F400C657EE /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		525598852C3D123C00C5789C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		525598862C3D123C00C5789C /* TaskTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskTableViewCell.xib; sourceTree = "<group>"; };
 		528665C72C3D26D300C657EE /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		528665CD2C3DA6F400C657EE /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				525598712C3CEDED00C5789C /* CreateTaskScreenController.swift */,
 				525598792C3CFA3600C5789C /* HomeViewController.swift */,
 				525598772C3CFA1500C5789C /* SettingsViewController.swift */,
+				528665CD2C3DA6F400C657EE /* InfoViewController.swift */,
 				525598612C3CC7FC00C5789C /* Main.storyboard */,
 				5255987C2C3CFCB500C5789C /* utils */,
 				525598642C3CC7FE00C5789C /* Assets.xcassets */,
@@ -211,6 +214,7 @@
 				5255985C2C3CC7FC00C5789C /* AppDelegate.swift in Sources */,
 				525598842C3D03FF00C5789C /* StatusData.swift in Sources */,
 				5255987A2C3CFA3600C5789C /* HomeViewController.swift in Sources */,
+				528665CE2C3DA6F400C657EE /* InfoViewController.swift in Sources */,
 				5255985E2C3CC7FC00C5789C /* SceneDelegate.swift in Sources */,
 				528665C82C3D26D300C657EE /* MainViewModel.swift in Sources */,
 			);
