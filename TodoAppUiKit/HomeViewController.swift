@@ -50,6 +50,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.titleTask.text = task.title
         cell.descriptionTask.text = task.descreption
         cell.imageTask?.image = task.image
+        cell.index = indexPath
+        if task.status == StatusData.COMPLECTED {
+            cell.checkButton.setImage(UIImage(systemName: "square.fill"), for: .normal)
+        }else{
+            cell.checkButton.setImage(UIImage(systemName: "square"), for: .normal)
+
+        }
         cell.isCheckedd = task.status == StatusData.COMPLECTED
         
         let dateFormatter = DateFormatter()
@@ -76,10 +83,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print("home viewWillAppear \(vm.tempList)")
+        print("home viewWillAppear \(vm.tempList.count)")
     }
     override func viewDidAppear(_ animated: Bool) {
         vm.filterAndSort()
+        print("home viewDidAppear tempList \(vm.tempList.count)")
+        print("home viewDidAppear taskList \(vm.taskList.count)")
         tableView.reloadData()
     }
     
@@ -89,10 +98,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        tableView.reloadRows(at: [IndexPath(row: index!, section: 0)], with: UITableViewRowAnimation.none)
 //    }
     
-    func coplectedButtonClick(in index: Int?, id: String, isChecked: Bool) {
+    func coplectedButtonClick(in index: IndexPath, id: String, isChecked: Bool) {
         vm.changeTaskStatus(b: !isChecked, id: id)
         print("coplectedButtonClick\(isChecked)")
-        tableView.reloadData()
+        tableView.reloadRows(at: [index], with: .automatic)
 
     }
 }

@@ -100,7 +100,7 @@ class MainViewModel : ObservableObject {
             })!)
         }
         
-        
+        if temp == nil {return}
         taskList.append(temp!)
         filterAndSort()
     }

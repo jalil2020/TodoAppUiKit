@@ -9,11 +9,9 @@
 /* Begin PBXBuildFile section */
 		5255985C2C3CC7FC00C5789C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255985B2C3CC7FC00C5789C /* AppDelegate.swift */; };
 		5255985E2C3CC7FC00C5789C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255985D2C3CC7FC00C5789C /* SceneDelegate.swift */; };
-		525598602C3CC7FC00C5789C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5255985F2C3CC7FC00C5789C /* MainViewController.swift */; };
 		525598632C3CC7FC00C5789C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 525598612C3CC7FC00C5789C /* Main.storyboard */; };
 		525598652C3CC7FE00C5789C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 525598642C3CC7FE00C5789C /* Assets.xcassets */; };
 		525598722C3CEDED00C5789C /* CreateTaskScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525598712C3CEDED00C5789C /* CreateTaskScreenController.swift */; };
-		525598762C3CF80300C5789C /* TabControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525598752C3CF80300C5789C /* TabControllerViewController.swift */; };
 		525598782C3CFA1500C5789C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525598772C3CFA1500C5789C /* SettingsViewController.swift */; };
 		5255987A2C3CFA3600C5789C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525598792C3CFA3600C5789C /* HomeViewController.swift */; };
 		525598822C3D03E600C5789C /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525598812C3D03E600C5789C /* TaskData.swift */; };
@@ -28,12 +26,10 @@
 		525598582C3CC7FC00C5789C /* TodoAppUiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppUiKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5255985B2C3CC7FC00C5789C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5255985D2C3CC7FC00C5789C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5255985F2C3CC7FC00C5789C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		525598622C3CC7FC00C5789C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		525598642C3CC7FE00C5789C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		525598692C3CC7FE00C5789C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525598712C3CEDED00C5789C /* CreateTaskScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskScreenController.swift; sourceTree = "<group>"; };
-		525598752C3CF80300C5789C /* TabControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControllerViewController.swift; sourceTree = "<group>"; };
 		525598772C3CFA1500C5789C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		525598792C3CFA3600C5789C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		525598812C3D03E600C5789C /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
@@ -78,8 +74,6 @@
 				525598802C3D018900C5789C /* cells */,
 				5255987F2C3D017700C5789C /* app */,
 				5255987B2C3CFC9D00C5789C /* data */,
-				525598752C3CF80300C5789C /* TabControllerViewController.swift */,
-				5255985F2C3CC7FC00C5789C /* MainViewController.swift */,
 				525598712C3CEDED00C5789C /* CreateTaskScreenController.swift */,
 				525598792C3CFA3600C5789C /* HomeViewController.swift */,
 				525598772C3CFA1500C5789C /* SettingsViewController.swift */,
@@ -208,8 +202,6 @@
 				525598782C3CFA1500C5789C /* SettingsViewController.swift in Sources */,
 				525598722C3CEDED00C5789C /* CreateTaskScreenController.swift in Sources */,
 				525598872C3D123C00C5789C /* TaskTableViewCell.swift in Sources */,
-				525598762C3CF80300C5789C /* TabControllerViewController.swift in Sources */,
-				525598602C3CC7FC00C5789C /* MainViewController.swift in Sources */,
 				525598822C3D03E600C5789C /* TaskData.swift in Sources */,
 				5255985C2C3CC7FC00C5789C /* AppDelegate.swift in Sources */,
 				525598842C3D03FF00C5789C /* StatusData.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TaskTableViewCellDelegate: AnyObject {
-    func coplectedButtonClick(in index:Int?, id: String, isChecked:Bool)
+    func coplectedButtonClick(in index:IndexPath, id: String, isChecked:Bool)
 }
 
 class TaskTableViewCell: UITableViewCell {
@@ -17,7 +17,7 @@ class TaskTableViewCell: UITableViewCell {
     
     var idd:String!
     var isCheckedd:Bool!
-    var index:Int!
+    var index:IndexPath!
     @IBOutlet weak var imageTask: UIImageView!
     @IBOutlet weak var titleTask: UILabel!
     @IBOutlet weak var descriptionTask: UILabel!
@@ -44,6 +44,8 @@ class TaskTableViewCell: UITableViewCell {
 
     
     @objc func complectedCheckButtonClick(_ sender: Any) {
+        if index == nil {return}
+            
         delegate?.coplectedButtonClick(in: index, id: idd,isChecked: isCheckedd)
     }
     
@@ -52,12 +54,13 @@ class TaskTableViewCell: UITableViewCell {
         
         checkButton.addTarget(self, action: #selector(complectedCheckButtonClick), for: .touchUpInside)
         
-        if let a = isCheckedd {
-            checkButton.setImage(UIImage(systemName:"square"),for: .normal)
-                }
-                else {
-            checkButton.setImage( UIImage(systemName:"square.fill"),for: .normal)
-            }
+        print("awakeFromNib")
+//        if let a = isCheckedd {
+//            checkButton.setImage(UIImage(systemName:"square"),for: .normal)
+//                }
+//                else {
+//            checkButton.setImage( UIImage(systemName:"square.fill"),for: .normal)
+//            }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
