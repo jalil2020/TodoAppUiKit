@@ -47,11 +47,12 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lZ-22-lco">
                                 <rect key="frame" x="16" y="612" width="353" height="34.333333333333371"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="353" id="hEZ-KT-SaJ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" id="ic3-JK-GrW"/>
                                 </constraints>
-                                <color key="tintColor" name="orange"/>
+                                <color key="tintColor" name="mainColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Save"/>
                                 <connections>
@@ -86,7 +87,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8pZ-zW-2Cb"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg_color"/>
                         <constraints>
                             <constraint firstItem="p0s-hB-axS" firstAttribute="leading" secondItem="8pZ-zW-2Cb" secondAttribute="leading" constant="16" id="6R3-zw-7uO"/>
                             <constraint firstItem="8pZ-zW-2Cb" firstAttribute="trailing" secondItem="S3l-Ph-xbb" secondAttribute="trailing" constant="16" id="6fT-8F-zVZ"/>
@@ -156,10 +157,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgb-04-14F">
-                                <rect key="frame" x="230" y="123" width="111" height="21"/>
-                                <color key="tintColor" name="orange"/>
+                                <rect key="frame" x="158" y="123" width="226" height="21"/>
+                                <color key="tintColor" name="Color"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Create task"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus.circle.fill" catalog="system" title="Create task"/>
                                 <connections>
                                     <action selector="openCreateTaskScreen:" destination="gQ0-Yl-4VP" eventType="touchUpInside" id="CI1-aE-8CF"/>
                                     <action selector="openCreateTaskScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4X-1G-Ol4"/>
@@ -167,16 +168,45 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="879-j0-uGx">
                                 <rect key="frame" x="0.0" y="144" width="393" height="625"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="bg_color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="625" id="Bny-9K-sHA"/>
                                     <constraint firstAttribute="width" constant="393" id="vqB-u5-Yp8"/>
                                 </constraints>
-                                <color key="sectionIndexBackgroundColor" systemColor="systemPurpleColor"/>
+                                <color key="separatorColor" name="bg_color"/>
+                                <color key="sectionIndexBackgroundColor" name="bg_color"/>
+                                <color key="sectionIndexTrackingBackgroundColor" name="bg_color"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rIV-1v-j8x">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rIV-1v-j8x" id="YIY-R5-TuC">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UB7-22-d3I">
+                                        <rect key="frame" x="0.0" y="93.666667938232422" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UB7-22-d3I" id="Pgi-uE-xRf">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hvD-PH-FuE">
+                                        <rect key="frame" x="0.0" y="137.33333587646484" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hvD-PH-FuE" id="hHx-Rz-mAa">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg_color"/>
                         <constraints>
                             <constraint firstItem="879-j0-uGx" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7ZX-8L-AS7"/>
                             <constraint firstItem="879-j0-uGx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="g5x-VM-T8N"/>
@@ -240,6 +270,8 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a17-K1-3Yv">
                                                 <rect key="frame" x="300" y="0.0" width="95" height="50"/>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <color key="onTintColor" name="AccentColor"/>
                                                 <connections>
                                                     <action selector="chageSwitch:forEvent:" destination="oDB-5U-M9d" eventType="editingChanged" id="Wxp-JM-4AN"/>
                                                     <action selector="changeSwitchSort:" destination="oDB-5U-M9d" eventType="valueChanged" id="f47-aL-9fA"/>
@@ -261,7 +293,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="oWN-fu-1WM"/>
                                                 </constraints>
-                                                <color key="tintColor" name="orange"/>
+                                                <color key="tintColor" name="mainColor"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
@@ -289,7 +321,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-JO-qxg">
                                                 <rect key="frame" x="154.33333333333337" y="0.0" width="238.66666666666663" height="50"/>
-                                                <color key="tintColor" name="orange"/>
+                                                <color key="tintColor" name="mainColor"/>
                                                 <state key="normal" title="Button"/>
                                             </button>
                                         </subviews>
@@ -309,7 +341,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lJC-sp-wwp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg_color"/>
                         <constraints>
                             <constraint firstItem="lJC-sp-wwp" firstAttribute="bottom" secondItem="V5V-s0-0er" secondAttribute="bottom" id="3r7-bp-iiT"/>
                             <constraint firstItem="V5V-s0-0er" firstAttribute="leading" secondItem="lJC-sp-wwp" secondAttribute="leading" constant="16" id="SQL-S3-g7h"/>
@@ -382,7 +414,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Go-0n-Txm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="bg_color"/>
                         <constraints>
                             <constraint firstItem="4Go-0n-Txm" firstAttribute="trailing" secondItem="oKn-cb-4kR" secondAttribute="trailing" constant="16" id="CBf-lB-gEe"/>
                             <constraint firstItem="oKn-cb-4kR" firstAttribute="top" secondItem="4Go-0n-Txm" secondAttribute="top" constant="93" id="CgT-Jn-qsU"/>
@@ -413,20 +445,21 @@
     <resources>
         <image name="homekit" catalog="system" width="128" height="104"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Color">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg_color">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="mainColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="orange">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

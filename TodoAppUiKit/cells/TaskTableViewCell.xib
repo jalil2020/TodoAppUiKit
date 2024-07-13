@@ -12,12 +12,12 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="127" id="KGk-i7-Jjw" customClass="TaskTableViewCell" customModule="TodoAppUiKit" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="392" height="179"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="392" height="179"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="132" translatesAutoresizingMaskIntoConstraints="NO" id="Wqk-Cx-7MJ">
-                        <rect key="frame" x="0.0" y="33" width="345" height="81.333333333333329"/>
+                        <rect key="frame" x="0.0" y="0.0" width="345" height="81.333333333333329"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQw-xE-gX4">
                                 <rect key="frame" x="0.0" y="0.0" width="80" height="81.333333333333329"/>
@@ -74,6 +74,8 @@
                         </constraints>
                     </stackView>
                 </subviews>
+                <viewLayoutGuide key="safeArea" id="oak-Lg-gN9"/>
+                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
